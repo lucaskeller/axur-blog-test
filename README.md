@@ -1,7 +1,6 @@
-# Axut blog test
+# Axur blog test
 
-
-Para rodar:
+run:
 
 ```bash
 yarn install
