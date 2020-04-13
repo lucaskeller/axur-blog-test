@@ -1,0 +1,114 @@
+@import '../../node_modules/bulma/bulma.sass';
+@import './config/_settings';
+@import './config/_general';
+
+#main {
+  .main-container { 
+    max-width: 1140px;
+    margin: 0 auto
+  }
+
+  header {
+    background-color: $pure-white;
+    height: 50px;
+
+    .main-container {
+      display: flex;
+      align-items: center;
+      min-height: 100%;
+
+      .main-title {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  footer {
+    background-color: $pure-white;
+    height: 50px;
+
+    .main-container {
+      display: flex;
+      align-items: center;
+      min-height: 100%;
+    }
+  }
+
+  .main-body {
+    .main-container {
+      .filters {
+        margin: 10px 0;
+        background-color: $pure-white;
+        padding: $content-paddings;
+
+        .filters-container {
+          display: flex;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+
+            label {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+
+      .content {
+        display: flex;
+        min-height: 100%;
+
+        .left-content {
+        margin-right: 10px;
+        width: 70%;
+        }
+        .right-content {
+          width: 30%;
+
+          .recent-posts {
+            background-color: $pure-white;
+            padding: $content-paddings;
+            margin-bottom: 10px;
+          }
+
+          .banner-item {
+            cursor: pointer;
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  .post-list-item {
+    background-color: $pure-white;
+    width: 100%;
+    padding: $content-paddings;
+    margin-bottom: 10px;
+
+    .post-image {
+      background-color: $ligh-grey;
+      width: 100%;
+      display: flex;
+
+      img {
+         margin: 0 auto;
+       }
+    }
+
+    .post-content {
+
+      h3 {
+        margin-top: 20px;
+      }
+
+      .post-date {
+        font-weight: bold;
+      }
+    }
+
+  }
+}

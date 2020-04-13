@@ -1,0 +1,26 @@
+FROM node:10.15-alpine as dependencies
+
+# Create the working dir
+RUN mkdir -p /opt/app
+WORKDIR /opt/app
+
+# Do not use cache when we change node dependencies in package.json
+COPY package.json yarn.lock ./
+
+# Install packages + Prepare cache file
+RUN yarn
+
+FROM dependencies as build
+
+COPY . /opt/app
+
+ARG BUILD_TARGET
+ENV BUILD_TARGET=$BUILD_TARGET
+
+RUN if [ -z ${BUILD_TARGET} ]; then yarn build; else yarn "build:${BUILD_TARGET}"; fi
+
+FROM nginx:1.14.2-alpine
+
+WORKDIR /opt/dist
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /opt/app/build /opt/dist

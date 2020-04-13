@@ -1,0 +1,21 @@
+// sizes
+$content-paddings: 20px;
+
+//colors
+$pure-white: #FFFFFF;
+$body-bg: #F5F5F5;
+$ligh-grey: #D0D0D0;
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 1 !important;
+  background: #2c3e50;
+  background-image: none;
+}
+
