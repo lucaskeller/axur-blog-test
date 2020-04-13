@@ -39,16 +39,19 @@ export const getFilteredPosts = (state, props) => filter =>
 
 export const getAdds = () => [
   {
+    id: 'ads1',
     title: 'Digital Fraud Discovery',
     link: 'https://axur.com/pt/digital-fraud.html',
     card: 'digital-fraud.png'
   },
   {
+    id: 'ads2',
     title: 'Sales Abuse Discovery',
     link: 'https://axur.com/pt/sales-abuse.html',
     card: 'sales-abuse.png'
   },
   {
+    id: 'ads3',
     title: 'Data Leakage Discovery',
     link: 'https://axur.com/pt/data-leak.html',
     card: 'data-leak.png'

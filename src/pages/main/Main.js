@@ -103,7 +103,7 @@ function Main(props) {
                 <ul>
                   {posts &&
                     _.map(_.orderBy(posts, 'metadata.publishedAt', 'desc'), post => (
-                      <li>
+                      <li key={post.title.length}>
                         {moment(post.metadata.publishedAt).format('DD/MM/YYYY')}:{' '}
                         <a href={`/post/${post.id}`} title={post.title}>
                           {post.title}
@@ -114,7 +114,7 @@ function Main(props) {
               </div>
               {adds &&
                 _.map(adds, add => (
-                  <BannerItem title={add.title} link={add.link} card={add.card} />
+                  <BannerItem key={add.id} title={add.title} link={add.link} card={add.card} />
                 ))}
             </div>
           </div>
